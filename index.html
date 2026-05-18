@@ -100,7 +100,6 @@ a{
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,0.04);
   transition:0.25s ease;
-  will-change:transform;
 }
 
 .link:hover{
@@ -159,11 +158,11 @@ a{
 }
 
 .about-image{
-  width:100%;
-  height:180px;
-  border-radius:18px;
-  object-fit:cover;
-  margin-bottom:18px;
+  width:140px;
+  height:140px;
+  object-fit:contain;
+  margin:0 auto 18px;
+  display:block;
 }
 
 .about-box h3{
@@ -267,21 +266,27 @@ a{
   right:18px;
   background:#5878B9;
   color:white;
-  width:52px;
-  height:52px;
+  width:54px;
+  height:54px;
   border-radius:18px;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:20px;
+  font-size:22px;
   cursor:pointer;
-  box-shadow:0 6px 18px rgba(0,0,0,0.15);
-  transition:0.3s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  transition:all 0.28s cubic-bezier(0.22,1,0.36,1);
   z-index:1001;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
 }
 
 .fab:hover{
-  transform:scale(1.05);
+  transform:scale(1.06);
+}
+
+.fab:active{
+  transform:scale(0.94);
 }
 
 /* POPUP */
@@ -293,13 +298,15 @@ a{
   background:white;
   padding:20px;
   border-radius:24px 24px 0 0;
-  box-shadow:0 -6px 25px rgba(0,0,0,0.12);
-  transition:bottom 0.35s cubic-bezier(0.22,1,0.36,1);
+  box-shadow:0 -8px 30px rgba(0,0,0,0.12);
+  transition:all 0.35s cubic-bezier(0.22,1,0.36,1);
   z-index:1000;
+  opacity:0;
 }
 
 .popup.active{
   bottom:0;
+  opacity:1;
 }
 
 .popup a{
@@ -326,9 +333,9 @@ a{
   background:rgba(0,0,0,0.25);
   opacity:0;
   visibility:hidden;
-  transition:0.25s ease;
+  transition:all 0.3s ease;
   z-index:999;
-  backdrop-filter:blur(2px);
+  backdrop-filter:blur(3px);
 }
 
 .overlay.active{
