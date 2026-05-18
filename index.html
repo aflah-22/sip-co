@@ -7,7 +7,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
 
 <title>Sip Co</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -44,13 +44,13 @@ a{
   text-align:center;
   padding:60px 15px 95px;
   font-size:28px;
-  font-weight:500;
+  font-weight:700;
   border-bottom-left-radius:30px;
   border-bottom-right-radius:30px;
   letter-spacing:1px;
 }
 
-/* CARD */
+/* MAIN CARD */
 
 .card{
   background:white;
@@ -508,7 +508,7 @@ a{
     <img src="./18054 ABDUL KHADER 1.jpg.jpeg">
 
     <div class="founder-info">
-      <h3>Abdul Khadar Melakath</h3>
+      <h3>Abdul Khader Melakot</h3>
       <p>Co-Founder & COO</p>
     </div>
   </div>
@@ -517,7 +517,7 @@ a{
     <img src="./WhatsApp Image 2026-05-18 at 12.55.17 PM.jpeg">
 
     <div class="founder-info">
-      <h3>Mohammed Aflah Ullattu Parambil</h3>
+      <h3>Mohammed Aflah Ulhattu Parambil</h3>
       <p>Co-Founder & CFO</p>
     </div>
   </div>
@@ -526,7 +526,7 @@ a{
     <img src="./WhatsApp Image 2026-05-18 at 12.42.43 PM.jpeg">
 
     <div class="founder-info">
-      <h3>Ansil Pullat</h3>
+      <h3>Ansil Pullot</h3>
       <p>Co-Founder & CMO</p>
     </div>
   </div>
@@ -585,13 +585,21 @@ a{
 <script>
 
 function openPopup(){
+
   document.getElementById("popup").classList.add("active");
   document.getElementById("overlay").classList.add("active");
+
+  document.body.style.overflow = "hidden";
+
 }
 
 function closePopup(){
+
   document.getElementById("popup").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
+
+  document.body.style.overflow = "auto";
+
 }
 
 function sharePage(){
@@ -615,11 +623,19 @@ function sharePage(){
 }
 
 function openLicence(){
+
   document.getElementById("licenceModal").style.display="flex";
+
+  document.body.style.overflow = "hidden";
+
 }
 
 function closeLicence(){
+
   document.getElementById("licenceModal").style.display="none";
+
+  document.body.style.overflow = "auto";
+
 }
 
 </script>
